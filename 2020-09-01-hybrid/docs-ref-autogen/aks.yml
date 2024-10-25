@@ -201,10 +201,12 @@ directCommands:
                   [--enable-oidc-issuer]
                   [--enable-private-cluster]
                   [--enable-secret-rotation]
+                  [--enable-secure-boot]
                   [--enable-sgxquotehelper]
                   [--enable-syslog {false, true}]
                   [--enable-ultra-ssd]
                   [--enable-vpa]
+                  [--enable-vtpm]
                   [--enable-windows-gmsa]
                   [--enable-windows-recording-rules]
                   [--enable-workload-identity]
@@ -641,6 +643,10 @@ directCommands:
     defaultValue: "False"
     summary: |-
       Enable secret rotation. Use with azure-keyvault-secrets-provider addon.
+  - name: --enable-secure-boot
+    defaultValue: "False"
+    summary: |-
+      Enable Secure Boot on all node pools in the cluster. Must use VMSS agent pool type.
   - name: --enable-sgxquotehelper
     defaultValue: "False"
     summary: |-
@@ -658,6 +664,10 @@ directCommands:
     defaultValue: "False"
     summary: |-
       Enable vertical pod autoscaler for cluster.
+  - name: --enable-vtpm
+    defaultValue: "False"
+    summary: |-
+      Enable vTPM on all node pools in the cluster. Must use VMSS agent pool type.
   - name: --enable-windows-gmsa
     defaultValue: "False"
     summary: |-
